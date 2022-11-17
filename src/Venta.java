@@ -4,18 +4,15 @@ public class Venta {
     private double descuento;
     private Producto producto;
     private Cliente cliente;
-    private Vendedor vendedor;
 
     Venta(int numeroDeCuotas,
           double descuento,
           Producto producto,
-          Cliente cliente,
-          Vendedor vendedor){
+          Cliente cliente) {
         setNumeroDeCuotas(numeroDeCuotas);
         setDescuento(descuento);
         setProducto(producto);
         setCliente(cliente);
-        setVendedor(vendedor);
     }
 
 
@@ -55,12 +52,5 @@ public class Venta {
         this.cliente = cliente;
     }
 
-    public Vendedor getVendedor() {
-        return vendedor;
-    }
-
-    public void setVendedor(Vendedor vendedor) {
-        this.vendedor = vendedor;
-    }
 }
 
