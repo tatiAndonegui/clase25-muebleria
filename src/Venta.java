@@ -4,6 +4,10 @@ public class Venta {
     private double descuento;
     private Producto producto;
 
+    public Venta(int numeroDeCuotas) {
+        this.numeroDeCuotas = numeroDeCuotas;
+    }
+
     public int getNumeroDeCuotas() {
         return numeroDeCuotas;
     }
@@ -19,4 +23,6 @@ public class Venta {
     public void setDescuento(double descuento) {
         this.descuento = descuento;
     }
+
 }
+

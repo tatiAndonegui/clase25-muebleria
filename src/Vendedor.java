@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 public class Vendedor {
 
     private String nombre;
     private Venta venta;
     private boolean reservado;
+    private ArrayList<Producto>productos;
 
     public String getNombre() {
         return nombre;
@@ -26,5 +29,13 @@ public class Vendedor {
 
     public void setReservado(boolean reservado) {
         this.reservado = reservado;
+    }
+
+    public ArrayList<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
     }
 }
