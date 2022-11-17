@@ -7,6 +7,13 @@ public class Vendedor {
     private boolean reservado;
     private ArrayList<Producto>productos;
 
+    Vendedor(String nombre,Venta venta,boolean reservado){
+        setNombre(nombre);
+        setVenta(venta);
+        setReservado(reservado);
+        setProductos(new ArrayList<Producto>());
+    }
+
     public String getNombre() {
         return nombre;
     }

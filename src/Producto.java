@@ -5,6 +5,16 @@ public class Producto {
     private int codigoDeProducto;
     private int stockDeProducto;
 
+    Producto (String nombreDeProducto,
+              double precioDeProducto,
+              int codigoDeProducto,
+              int stockDeProducto ){
+        setNombreDeProducto(nombreDeProducto);
+        setPrecioDeProducto(precioDeProducto);
+        setCodigoDeProducto(codigoDeProducto);
+        setStockDeProducto(stockDeProducto);
+    }
+
     public String getNombreDeProducto() {
         return nombreDeProducto;
     }

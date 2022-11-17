@@ -3,6 +3,11 @@ public class Cliente {
     private String nombre;
     private String formaDePago;
 
+    Cliente(String nombre,String formaDePago){
+        setNombre(nombre);
+        setFormaDePago(formaDePago);
+    }
+
     public String getNombre() {
         return nombre;
     }
