@@ -1,18 +1,23 @@
+import java.util.ArrayList;
+
 public class Producto {
 
+
+    private ArrayList<Producto>stock;
     private String nombreDeProducto;
     private double precioDeProducto;
     private int codigoDeProducto;
-    private int stockDeProducto;
+    private boolean reservado;
 
     Producto (String nombreDeProducto,
               double precioDeProducto,
               int codigoDeProducto,
-              int stockDeProducto ){
+              int stockDeProducto,boolean reservado ){
         setNombreDeProducto(nombreDeProducto);
         setPrecioDeProducto(precioDeProducto);
         setCodigoDeProducto(codigoDeProducto);
-        setStockDeProducto(stockDeProducto);
+        setStock (new ArrayList<Producto>());
+        setReservado(reservado);
     }
 
     public String getNombreDeProducto() {
@@ -39,11 +44,20 @@ public class Producto {
         this.codigoDeProducto = codigoDeProducto;
     }
 
-    public int getStockDeProducto() {
-        return stockDeProducto;
+
+    public boolean isReservado() {
+        return reservado;
     }
 
-    public void setStockDeProducto(int stockDeProducto) {
-        this.stockDeProducto = stockDeProducto;
+    public void setReservado(boolean reservado) {
+        this.reservado = reservado;
+    }
+
+    public ArrayList<Producto> getStock() {
+        return stock;
+    }
+
+    public void setStock(ArrayList<Producto> stock) {
+        this.stock = stock;
     }
 }

@@ -3,14 +3,13 @@ import java.util.ArrayList;
 public class Vendedor {
 
     private String nombre;
-    private Venta venta;
-    private boolean reservado;
     private ArrayList<Producto>productos;
+    //agregar array de lista de stock
+    //agregar array de  lista de vendidos
 
-    Vendedor(String nombre,Venta venta,boolean reservado){
+
+    Vendedor(String nombre){
         setNombre(nombre);
-        setVenta(venta);
-        setReservado(reservado);
         setProductos(new ArrayList<Producto>());
     }
 
@@ -22,21 +21,6 @@ public class Vendedor {
         this.nombre = nombre;
     }
 
-    public Venta getVenta() {
-        return venta;
-    }
-
-    public void setVenta(Venta venta) {
-        this.venta = venta;
-    }
-
-    public boolean isReservado() {
-        return reservado;
-    }
-
-    public void setReservado(boolean reservado) {
-        this.reservado = reservado;
-    }
 
     public ArrayList<Producto> getProductos() {
         return productos;
@@ -44,5 +28,13 @@ public class Vendedor {
 
     public void setProductos(ArrayList<Producto> productos) {
         this.productos = productos;
+    }
+
+    public void vender(Producto productoVendido){
+        // agregar metodo remove de lista de producto en stock a vendidos
+    }
+
+    public void reservar(Producto productoReservado) {
+        productoReservado.setReservado(true);
     }
 }
